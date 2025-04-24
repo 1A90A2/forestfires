@@ -14,7 +14,8 @@ from wtforms import FloatField, IntegerField
 
 
 # 모델 및 전처리기 로드 (한 번만)
-model = keras.models.load_model('fires_model.keras')
+model = keras.models.load_model('fires_model.keras', custom_objects={'Swish': tf.nn.swish})
+
 pipeline = joblib.load('full_pipeline.pkl')  # 저장된 ColumnTransformer
 
 # Flask 설정
