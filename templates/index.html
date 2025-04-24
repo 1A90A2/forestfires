@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="text-center">
+        <h2 class="alert alert-primary">산불 위험도 예측 시스템</h2>
+        <p>입력폼을 통해 기상 데이터를 입력하고 산불로 소실될 수 있는 예상 면적을 확인해보세요.</p>
+        <a href="{{ url_for('lab') }}" class="btn btn-success btn-lg mt-3">예측하러 가기</a>
+    </div>
+</div>
+{% endblock %}

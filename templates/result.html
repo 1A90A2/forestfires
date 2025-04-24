@@ -1,0 +1,11 @@
+<!-- templates/result.html -->
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+    <h2 class="alert alert-success">예측 결과</h2>
+    <br>
+    <h4 class="alert alert-light">예상 소실 면적:  {{res}} 제곱미터</h4>
+    </h4>
+    <a href="{{ url_for('lab') }}" class="btn btn-secondary mt-3">다시 예측하기</a>
+</div>
+{% endblock %}

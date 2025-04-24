@@ -1,0 +1,21 @@
+<!-- templates/prediction.html -->
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+    <h2>Fill in the data</h2>
+    <form method="POST" action="{{ url_for('lab') }}">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.longitude.label }} {{ form.longitude(class="form-control") }}
+            {{ form.latitude.label }} {{ form.latitude(class="form-control") }}
+            {{ form.month.label }} {{ form.month(class="form-control") }}
+            {{ form.day.label }} {{ form.day(class="form-control") }}
+            {{ form.avg_temp.label }} {{ form.avg_temp(class="form-control") }}
+            {{ form.max_temp.label }} {{ form.max_temp(class="form-control") }}
+            {{ form.max_wind_speed.label }} {{ form.max_wind_speed(class="form-control") }}
+            {{ form.avg_wind.label }} {{ form.avg_wind(class="form-control") }}
+        </div>
+        {{ form.submit(class="btn btn-primary mt-3") }}
+    </form>
+</div>
+{% endblock %}
